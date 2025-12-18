@@ -2,27 +2,101 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 :root {
     --max-width: 1100px;
-    --section-padding: 4rem 1rem;
+    --section-padding: 3rem 1rem;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     background-color: lightgray;
-    padding: 0.5rem 1.5rem;
+    padding: 2rem 1rem;
+
+
 }
 
 header h1 {
     font-size: 1.0rem;
     color: green;
     font-weight: bold;
+
 }
 
 header p {
     font-size: 0.7rem;
     color: red;
+}
+
+#call-now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 1rem;
+  padding: 0.3rem 0.25rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+}
+
+.cta-button:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    padding: var(--section-padding);
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                url('images/lawn.jpg') center/cover no-repeat;
+}
+
+#hero h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#hero h3 {
+    font-size: 0.8rem;
+    color: white;
 }
