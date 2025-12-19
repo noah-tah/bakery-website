@@ -73,7 +73,7 @@ header p {
 /* new: container that groups the call link and CTA button */
 #header-actions {
     display: flex;
-    flex-direction: row;   /* horizontal on small screens */
+    flex-direction: column;   /* horizontal on small screens */
     align-items: center;
     gap: 0.5rem;
     width: 100%;
