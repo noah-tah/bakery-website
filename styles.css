@@ -7,34 +7,36 @@
 
 :root {
     --max-width: 1100px;
-    --section-padding: 3rem 1rem;
+    --section-padding: 8rem 1rem;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     background-color: lightgray;
     padding: 2rem 1rem;
-
-
+    align-items: center;
+    gap: 0.75rem;
 }
 
 header h1 {
-    font-size: 1.0rem;
+    font-size: 2.0rem;
     color: green;
     font-weight: bold;
-
 }
 
 header p {
-    font-size: 0.7rem;
+    font-size: 1.00rem;
     color: red;
+    margin: 0;
 }
 
 #call-now {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    gap: 0.25rem;
 }
 
 .cta-button {
@@ -49,13 +51,13 @@ header p {
   cursor: pointer;
   display: inline-flex;
   font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
   margin: 0;
   min-height: 1rem;
-  padding: 0.3rem 0.25rem;
+  padding: 0.4rem 0.5rem;
   position: relative;
   text-decoration: none;
   transition: all 250ms;
@@ -63,7 +65,7 @@ header p {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
-  width: auto;
+  width: auto; 
 }
 
 .cta-button:hover,
@@ -87,7 +89,7 @@ header p {
     flex-direction: column;
     padding: var(--section-padding);
     background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-                url('images/lawn.jpg') center/cover no-repeat;
+                url('images/checkered_lawn.jpg') center/cover no-repeat;
 }
 
 #hero h2 {
@@ -99,4 +101,11 @@ header p {
 #hero h3 {
     font-size: 0.8rem;
     color: white;
+}
+
+#services {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--section-padding);
+    text-align: center;
 }
