@@ -318,7 +318,6 @@ header .cta-button {
     color: #444;
 }
 
-/* Modal overlay + card */
 .modal {
     position: fixed;
     inset: 0;
@@ -345,7 +344,6 @@ header .cta-button {
     text-align: left;
 }
 
-/* Close button */
 .modal .close {
     position: absolute;
     top: 8px;

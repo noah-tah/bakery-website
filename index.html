@@ -82,7 +82,6 @@
     </div>
 </body>
 <script>
-/* filepath: c:\Users\noah\workspace\lawn-care-website\index.html (script) */
 (function () {
     const modal = document.getElementById('modal');
     const modalContent = modal.querySelector('.modal-content');
@@ -100,6 +99,7 @@
     function closeModal() {
         modal.setAttribute('aria-hidden', 'true');
         document.removeEventListener('keydown', onKeyDown);
+        resetForm();
     }
 
     function onKeyDown(e) {
@@ -120,6 +120,11 @@
 
     // prevent clicks inside content from closing
     modalContent.addEventListener('click', function (e) { e.stopPropagation(); });
+
+    function resetForm() {
+        const form = modal.querySelector('.modal-form');
+        form.reset();
+    }
 })();
 </script>
 </html>
