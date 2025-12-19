@@ -109,3 +109,44 @@ header p {
     padding: var(--section-padding);
     text-align: center;
 }
+
+#services h2 {
+    margin-bottom: 2rem;
+}
+
+#services ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+#services li {
+    height: 200px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+}
+
+#services li:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/mowing.jpeg');
+}
+
+#services li:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/edging.jpg');
+}
+
+#services li:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/cleanup.jpg');
+}
+
+#services li:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/maintenance.jpg');
+}
