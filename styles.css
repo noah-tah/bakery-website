@@ -168,13 +168,29 @@ header .cta-button {
 
 #services {
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding: var(--section-padding);
+    margin: 1.5rem auto;
+    padding: 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#services .services-card {
+    width: 100%;
+    max-width: 380px;
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 #services h2 {
-    margin-bottom: 2rem;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #064e21;
 }
 
 #services ul {
