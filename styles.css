@@ -35,6 +35,18 @@ header {
     gap: 0.5rem;
 }
 
+@media (min-width: 768px) {
+    header {
+        max-width: var(--max-width);
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        gap: 0;
+        margin: 0;
+    }
+}
+
+
 header h1 {
     font-size: 1.25rem;              
     color: #064e21;                  
@@ -56,6 +68,16 @@ header p {
     align-items: center;
     gap: 0.5rem;
     width: 100%;
+}
+
+/* new: container that groups the call link and CTA button */
+#header-actions {
+    display: flex;
+    flex-direction: row;   /* horizontal on small screens */
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
 }
 
 #call-now a {
