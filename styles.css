@@ -317,3 +317,71 @@ header .cta-button {
     font-size: 0.9rem;
     color: #444;
 }
+
+/* Modal overlay + card */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2,6,23,0.55);
+    padding: 1rem;
+    z-index: 1200;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal .modal-content {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 12px 40px rgba(2,6,23,0.12);
+    position: relative;
+    text-align: left;
+}
+
+/* Close button */
+.modal .close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modal form controls (mobile-friendly) */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-form label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.modal-form input {
+    width: 100%;
+    padding: 0.55rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.12);
+    font-size: 0.95rem;
+}
+
+/* Make modal submit button match CTA style and fill width */
+.modal-form .cta-button {
+    width: 100%;
+    padding: 0.6rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}

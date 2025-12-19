@@ -57,5 +57,69 @@
             <p class="footer-text">We are happy to serve residents and businesses in Your City</p>
         </div>
     </footer>
+
+    <!-- Modal (hidden by default) -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content" role="document">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <h2 id="modal-title">Free Quote Form</h2>
+            <form action="/submit-quote" method="post" class="modal-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+
+                <button type="submit" class="cta-button">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
+<script>
+/* filepath: c:\Users\noah\workspace\lawn-care-website\index.html (script) */
+(function () {
+    const modal = document.getElementById('modal');
+    const modalContent = modal.querySelector('.modal-content');
+    const openers = document.querySelectorAll('.cta-button');
+    const closer = modal.querySelector('.close');
+
+    function openModal() {
+        modal.setAttribute('aria-hidden', 'false');
+        // focus first input
+        const first = modal.querySelector('input,button,textarea,select');
+        if (first) first.focus();
+        document.addEventListener('keydown', onKeyDown);
+    }
+
+    function closeModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        document.removeEventListener('keydown', onKeyDown);
+    }
+
+    function onKeyDown(e) {
+        if (e.key === 'Escape') closeModal();
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal();
+    }));
+
+    closer.addEventListener('click', closeModal);
+
+    // close when clicking outside modal-content
+    modal.addEventListener('click', function (e) {
+        if (!modalContent.contains(e.target)) closeModal();
+    });
+
+    // prevent clicks inside content from closing
+    modalContent.addEventListener('click', function (e) { e.stopPropagation(); });
+})();
+</script>
 </html>
