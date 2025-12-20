@@ -48,8 +48,13 @@ header {
         gap: 0;
         margin: 0;
     }
+    header .cta-button {
+        min-height: 53.4px;
+    }
+    #header-actions {
+        flex-direction: row;
+    }
 }
-
 
 header h1 {
     font-size: 1.25rem;              
@@ -76,9 +81,16 @@ header p {
 
 #header-actions {
     display: flex;
+    flex-direction: column;;
     align-items: center;
     gap: 0.5rem;
     justify-content: flex-end;
+}
+
+@media (min-width: 1024px) {
+    #header-actions {
+        flex-direction: row;
+    }
 }
 
 #call-now a {
