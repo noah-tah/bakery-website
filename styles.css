@@ -24,7 +24,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: white;
     width: 100%;
     max-width: 380px;
@@ -33,6 +33,10 @@ header {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(2,6,23,0.06);
     gap: 0.5rem;
+}
+
+.header-brand h1 {
+    text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -70,14 +74,11 @@ header p {
     width: 100%;
 }
 
-/* new: container that groups the call link and CTA button */
 #header-actions {
     display: flex;
-    flex-direction: column;   /* horizontal on small screens */
     align-items: center;
     gap: 0.5rem;
-    width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 #call-now a {
