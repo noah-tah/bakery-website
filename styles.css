@@ -212,7 +212,7 @@ header .cta-button {
     max-width: 380px;
     min-height: 350px;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('images/checkered_lawn.jpg') center/cover no-repeat;
+                url('images/lawn.webp') center/cover no-repeat;
     border-radius: 10px;
     padding: 1.5rem 1rem;
     box-shadow: 0 10px 30px rgba(2,6,23,0.06);
