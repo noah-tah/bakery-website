@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Lawn Care Business</title>
+    <title>Ponca City Bakery</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
@@ -10,15 +10,15 @@
     <header>
         <div class="header-container">
             <div class="header-brand">
-                <h1>Ponca City Lawn Care</h1>
+                <h1>Ponca City Bakery</h1>
             </div>
 
             <div id="header-actions">
                 <div id="call-now">
-                    <a href="tel:5805805800">Call Now: 580-580-5800</a>
+                    <a href="tel:5805805800">Call Us: 580-580-5800</a>
                 </div>
 
-                <button class="cta-button">Free Quote Now</button>
+                <button class="cta-button">Catering Request</button>
             </div>
         </div>
 
@@ -28,7 +28,7 @@
     <div id="hero">
         <div class="hero-card">
             <h2>Locally Owned and Operated in Ponca City</h2>
-            <h3>Professional mowing, trimming, edging, and seasonal maintenance for homes and businesses.</h3>
+            <h3>Professional baking and pastry services for homes and businesses.</h3>
         </div>
     </div>
     <!-- End of hero section -->
@@ -38,10 +38,10 @@
         <div class="services-card">
             <h2>Our Services</h2>
             <ul>
-                <li>Lawn Mowing</li>
-                <li>Edging & Trimming</li>
-                <li>Leaf Cleanup</li>
-                <li>Seasonal Maintenance</li>
+                <li>Cakes</li>
+                <li>Cupcakes</li>
+                <li>Cookies</li>
+                <li>Croissants</li>
             </ul>
         </div>
     </div>
@@ -51,20 +51,20 @@
     <section id="cta" aria-labelledby="cta-heading">
         <div class="cta-card">
             <div class="cta-content">
-                <h2 id="cta-heading">Get your free quote</h2>
-                <p>Prompt, professional service from a local lawn care team in Ponca City — schedules fill up quickly.</p>
+                <h2 id="cta-heading">Make a Catering Request!</h2>
+                <p>Customizations are available on all of our products, just contact us during the catering request process!</p>
             </div>
 
             <div class="cta-actions">
-                <button class="cta-button">Free Quote Now</button>
+                <button class="cta-button">Catering Request</button>
                 <a class="cta-link" href="tel:5805805800">Call 580‑580‑5800</a>
             </div>
     </section>
     <!-- End of CTA section -->
     <footer class="site-footer">
         <div class="footer-card">
-            <p class="footer-company">Ponca City Lawn Care</p>
-            <p class="footer-text">&copy; 2025 Ponca City Lawn Care.</p>
+            <p class="footer-company">Ponca City Bakery</p>
+            <p class="footer-text">&copy; 2025 Ponca City Bakery.</p>
             <p class="footer-text">We are happy to serve residents and businesses in Ponca City</p>
         </div>
     </footer>
@@ -73,21 +73,21 @@
     <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content" role="document">
             <button class="close" aria-label="Close modal">&times;</button>
-            <h2 id="modal-title">Free Quote Form</h2>
+            <h2 id="modal-title">Catering Request</h2>
             <form action="/submit-quote" method="post" class="modal-form">
-                <label for="name">Name</label>
+                <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">Email</label>
+                <label for="email">Your Email</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="phone">Phone</label>
+                <label for="phone">Your Phone Number</label>
                 <input type="tel" id="phone" name="phone" required>
 
-                <label for="address">Address</label>
+                <label for="address">Your Address</label>
                 <input type="text" id="address" name="address" required>
 
-                <button type="submit" onclick="submitForm()" id="submit-button">Submit</button>
+                <button type="submit" onclick="submitForm()" id="submit-button">Submit Request</button>
             </form>
         </div>
     </div>
