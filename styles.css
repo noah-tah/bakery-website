@@ -231,7 +231,6 @@ header .cta-button {
     align-items: center;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: var(--section-padding);
     min-height: 300px;
     border-radius: 10px;
     text-align: center;
@@ -241,6 +240,8 @@ header .cta-button {
 @media (min-width: 768px) {
     #hero {
         padding: 0;
+        margin: 0;
+
     }
 }
 
