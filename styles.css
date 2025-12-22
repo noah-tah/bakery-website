@@ -35,6 +35,12 @@ header {
     gap: 0.5rem;
 }
 
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 @media (min-width: 768px) {
     header {
         max-width: var(--max-width);
@@ -102,7 +108,7 @@ header p {
 
 @media (min-width: 768px) {
     #call-now {
-        width: auto;
+        width: 100%;
     }
 }
 
@@ -468,7 +474,13 @@ header .cta-button {
     flex-direction: column;
     align-items: center;
     padding: 1.5rem 1rem; 
-    background-color: #A0B9C5;
+    background-color: #f4f7f3;
+}
+
+@media (min-width: 768px) {
+    #cta {
+        background-color: #A0B9C5;
+    }
 }
 
 @media (min-width: 768px) {
@@ -614,7 +626,7 @@ header .cta-button {
     gap: 0.35rem;
     align-items: center;
     border: 1px solid rgba(0,0,0,0.04);
-    background-color: #A4243B;
+    background-color: #3D405B;
 }
 
 @media (min-width: 768px) {
