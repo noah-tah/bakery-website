@@ -271,14 +271,16 @@ header .cta-button {
 
 @keyframes fadeIn {
     from {
-        opacity: .3;
-        transform: translateY(10px);
+        transform: translateY(6px);
+        opacity: 0;
     }
     to {
-        opacity: 1;
         transform: translateY(0);
+        opacity: 1;
     }
 }
+
+
 
 @media (min-width: 768px) {
     .hero-card {
@@ -327,7 +329,7 @@ header .cta-button {
     }
 }
 
-#services {
+#featured-items {
     max-width: var(--max-width);
     margin: 1.5rem auto;
     padding: 0;
@@ -337,7 +339,7 @@ header .cta-button {
 }
 
 @media (min-width: 768px) {
-    #services {
+    #featured-items {
         max-width: none;
         margin: 0;
         min-height: 600px;
@@ -346,7 +348,7 @@ header .cta-button {
 }
 
 @media (min-width: 1024px) {
-    #services {
+    #featured-items {
         min-height: 1100px;
         max-width: none;
         margin: 0;
@@ -355,7 +357,7 @@ header .cta-button {
     }
 }
 
-#services .services-card {
+#featured-items .featured-items-card {
     width: 100%;
     max-width: 380px;
     background: white;
@@ -369,7 +371,7 @@ header .cta-button {
 }
 
 @media (min-width: 768px) {
-    #services .services-card {
+    #featured-items .featured-items-card {
         max-width: none;
         border-radius: 0;
         padding-left: 2rem;
@@ -381,7 +383,7 @@ header .cta-button {
 }
 
 @media (min-width: 1024px) {
-    #services .services-card {
+    #featured-items .featured-items-card {
         width: 100%;
         min-height: 1100px;
         padding: 6rem 10rem;
@@ -391,20 +393,20 @@ header .cta-button {
 
 
 
-#services h2 {
+#featured-items h2 {
     margin: 0;
     font-size: 1.2rem;
     color: white;
 }
 
 @media (min-width: 1024px) {
-    #services h2 {
+    #featured-items h2 {
         font-size: 2.5rem;
         margin-bottom: 2rem;
     }
 }
 
-#services ul {
+#featured-items ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -412,7 +414,7 @@ header .cta-button {
 }
 
 @media (min-width: 1024px) {
-    #services ul {
+    #featured-items ul {
         flex: 1;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -420,7 +422,7 @@ header .cta-button {
     }
 }
 
-#services li {
+#featured-items li {
     height: 140px; 
     border-radius: 0.5rem;
     display: flex;
@@ -437,28 +439,28 @@ header .cta-button {
 }
 
 @media (min-width: 768px) {
-    #services ul {
+    #featured-items ul {
         flex: 1;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
-    #services li {
+    #featured-items li {
         height: 100%;
         min-height: 180px;
     }
 }
 
 @media (min-width: 1024px) {
-    #services li {
+    #featured-items li {
         height: auto;
         min-height: 200px;
         font-size: 1.25rem;
         padding: 1rem;
     }
 
-    #services ul li {
+    #featured-items ul li {
         height: 100%;
         display: flex;
         align-items: center;
@@ -466,19 +468,19 @@ header .cta-button {
     }
 }
 
-#services li:nth-child(1) {
+#featured-items li:nth-child(1) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/cake.jpg');
 }
 
-#services li:nth-child(2) {
+#featured-items li:nth-child(2) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/cupcake.jpg');
 }
 
-#services li:nth-child(3) {
+#featured-items li:nth-child(3) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/cookie.jpg');
 }
 
-#services li:nth-child(4) {
+#featured-items li:nth-child(4) {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/croissant.jpg');
 }
 
