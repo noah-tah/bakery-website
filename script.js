@@ -65,6 +65,21 @@ const observer = new IntersectionObserver((entries) => {
     rootMargin: '0px',
     threshold: 0.1
 });
+/*
+This section will set up the boolean values for the device size.
+*/
+
+const isMobile = window.matchMedia("(max-width: 767px)").matches;
+const isTablet = window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches;
+const isDesktop = window.matchMedia("(min-width: 1025px)").matches;
+
+
+
+
+/*
+    Implementation below is for the desktop version of the website.
+*/
+
 
 const items = document.querySelectorAll('#featured-items li');
 console.log("Found", items.length, 'items to observe');
