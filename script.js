@@ -46,3 +46,21 @@
 submitForm = () => {
     alert("Form Submitted!");
 }
+
+const observer = new IntersectionObserver((entries) => {}, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+});
+
+const sections = document.querySelectorAll('li');
+sections.forEach(section => {
+    console.log(section);
+    observer.observe(section);
+});
+
+
+
+
+
+
