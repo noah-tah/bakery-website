@@ -47,20 +47,29 @@ submitForm = () => {
     alert("Form Submitted!");
 }
 
-const observer = new IntersectionObserver((entries) => {}, {
+const observer = new IntersectionObserver((entries) => {
+    console.log("Observer callback is executing", entries.length, 'entries');
+    entries.forEach(entry => {
+        console.log("Entry:", {
+            target: entry.target,
+            isIntersecting: entry.isIntersecting,
+            intersectionRatio: entry.intersectionRatio,
+        });
+        if (entry.isIntersecting) {
+            entry.target.classList.add('featured-item-in-view');
+            console.log("Class added to:", entry.target.textContent);
+        }
+    });
+}, {
     root: null,
     rootMargin: '0px',
     threshold: 0.1
 });
 
-const sections = document.querySelectorAll('li');
-sections.forEach(section => {
-    console.log(section);
-    observer.observe(section);
+const items = document.querySelectorAll('#featured-items li');
+console.log("Found", items.length, 'items to observe');
+
+items.forEach((item, index) => {
+    console.log(`Observing item ${index + 1}: `, item.textContent, item);
+    observer.observe(item);
 });
-
-
-
-
-
-
