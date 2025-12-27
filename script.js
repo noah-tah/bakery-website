@@ -6,7 +6,6 @@
 
     function openModal() {
         modal.setAttribute('aria-hidden', 'false');
-        // focus first input
         const first = modal.querySelector('input,button,textarea,select');
         if (first) first.focus();
         document.addEventListener('keydown', onKeyDown);
@@ -29,12 +28,10 @@
 
     closer.addEventListener('click', closeModal);
 
-    // close when clicking outside modal-content
     modal.addEventListener('click', function (e) {
         if (!modalContent.contains(e.target)) closeModal();
     });
 
-    // prevent clicks inside content from closing
     modalContent.addEventListener('click', function (e) { e.stopPropagation(); });
 
     function resetForm() {
@@ -57,7 +54,6 @@ const observer = new IntersectionObserver((entries) => {
         });
         if (entry.isIntersecting) {
             entry.target.classList.add('featured-item-in-view');
-            console.log("Class added to:", entry.target.textContent);
         }
     });
 }, {
@@ -65,49 +61,26 @@ const observer = new IntersectionObserver((entries) => {
     rootMargin: '0px',
     threshold: 0.1
 });
-/*
-This section will set up the boolean values for the device size.
-*/
 
 const isMobile = window.matchMedia("(max-width: 767px)").matches;
 const isTablet = window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches;
 const isDesktop = window.matchMedia("(min-width: 1025px)").matches;
 
-
-
-
-/*
-    Implementation below is for the desktop version of the website.
-*/
-
 if (isDesktop) {
     const items = document.querySelectorAll('#featured-items li');
-    console.log("Found", items.length, 'items to observe');
     items.forEach((item, index) => {
-        console.log(`Observing item ${index + 1}: `, item.textContent, item);
         observer.observe(item);
     });
 }
 
-/*
-    On Tablet, we will only animate the entire featured-items section
-    instead of the individual list items as we are on Desktop
-*/
-
 if (isTablet) {
     const item = document.querySelector('.featured-items-card');
-    console.log("Observing item:", item);
     observer.observe(item);
 }
 
-/*
-    On mobile, we will prefire the entire featured-items-card section as one item to animate, without waiting for the
-    items to come into view. 
-*/
 if (isMobile) {
     const items = document.querySelectorAll('#featured-items li');
     items.forEach(item => {
         item.classList.add('featured-item-in-view');
     })
 }
-
