@@ -98,14 +98,16 @@ if (isTablet) {
     const item = document.querySelector('.featured-items-card');
     console.log("Observing item:", item);
     observer.observe(item);
-
 }
 
+/*
+    On mobile, we will prefire the entire featured-items-card section as one item to animate, without waiting for the
+    items to come into view. 
+*/
 if (isMobile) {
     const items = document.querySelectorAll('#featured-items li');
-    console.log("Found", items.length, 'items to observe');
-    items.forEach((item, index) => {
-        console.log(`Observing item ${index + 1}: `, item.textContent, item);
-        observer.observe(item);
-    });
+    items.forEach(item => {
+        item.classList.add('featured-item-in-view');
+    })
 }
+
