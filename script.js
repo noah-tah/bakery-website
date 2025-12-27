@@ -80,11 +80,23 @@ const isDesktop = window.matchMedia("(min-width: 1025px)").matches;
     Implementation below is for the desktop version of the website.
 */
 
+if (isDesktop) {
+    const items = document.querySelectorAll('#featured-items li');
+    console.log("Found", items.length, 'items to observe');
+    items.forEach((item, index) => {
+        console.log(`Observing item ${index + 1}: `, item.textContent, item);
+        observer.observe(item);
+    });
+}
 
-const items = document.querySelectorAll('#featured-items li');
-console.log("Found", items.length, 'items to observe');
+/*
+    On Tablet, we will only animate the entire featured-items section
+    instead of the individual list items as we are on Desktop
+*/
 
-items.forEach((item, index) => {
-    console.log(`Observing item ${index + 1}: `, item.textContent, item);
+if (isTablet) {
+    const item = document.querySelector('.featured-items-card');
+    console.log("Observing item:", item);
     observer.observe(item);
-});
+
+}

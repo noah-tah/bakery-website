@@ -370,6 +370,14 @@ header .cta-button {
     background-color: #3D405B;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    #featured-items .featured-items-card.featured-item-in-view li {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
 @media (min-width: 768px) {
     #featured-items .featured-items-card {
         max-width: none;
