@@ -462,6 +462,12 @@ header .cta-button {
     opacity: 0;
 }
 
+#featured-items li.featured-item-in-view:hover {
+    transform: translateY(0) scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+
 /* 
     This is the one that I intend on using javascript to animate the items as they come into view.
 */
