@@ -67,7 +67,7 @@
         <div class="modal-content" role="document">
             <button class="close" aria-label="Close modal">&times;</button>
             <h2 id="modal-title">Catering Request</h2>
-            <form action="/submit-quote" method="post" class="modal-form">
+            <form id="modal-form" class="modal-form">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -83,7 +83,7 @@
                 <label for="message">Your Message</label>
                 <input type="text" id="message" name="message" required>
 
-                <button type="submit" onclick="submitForm()" id="submit-button">Submit Request</button>
+                <button type="submit" id="submit-button">Submit Request</button>
             </form>
         </div>
     </div>

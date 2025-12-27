@@ -83,7 +83,7 @@ if (isMobile) {
 }
 
 
-document.querySelector('#submit-button').addEventListener('click', () => {
+document.querySelector('#submit-button').addEventListener('click', (e) => {
     e.preventDefault();
 
 
