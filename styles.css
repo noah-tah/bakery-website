@@ -419,7 +419,7 @@ header .cta-button {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5rem;
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
