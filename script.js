@@ -40,9 +40,6 @@
     }
 })();
 
-submitForm = () => {
-    alert("Form Submitted!");
-}
 
 const observer = new IntersectionObserver((entries) => {
     console.log("Observer callback is executing", entries.length, 'entries');
@@ -84,3 +81,45 @@ if (isMobile) {
         item.classList.add('featured-item-in-view');
     })
 }
+
+
+document.querySelector('#submit-button').addEventListener('click', () => {
+    e.preventDefault();
+
+
+    const name = document.querySelector('#name').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const phone = document.querySelector('#phone').value.trim();
+    const address = document.querySelector('#address').value.trim();
+    const message = document.querySelector('#message').value.trim();
+
+    if (name === '' || email === '' || phone === '' || address === '' || message === '') {
+        alert("Please fill out all fields");
+        return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address");
+        return;
+    }
+
+    const data = { name, email, phone, address, message };
+    fetch('/submit-request', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(response => response.json())
+    .then(data => {
+        console.log(data);
+        alert("Request submitted! We will get back to you as soon as possible!");
+        document.getElementById('modal').setAttribute('aria-hidden', 'true');
+        document.querySelector('.modal-form').reset();
+    })
+    .catch(error => {
+        alert("Error submitting request. Please try again.");
+        console.error('Error:', error);
+    });
+});

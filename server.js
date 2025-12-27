@@ -31,3 +31,19 @@ const db = new sqlite3.Database('bakery.db', (err) => {
     );
 });
 
+app.post('/submit-request', (req, res) => {
+    const { name, email, phone, address, message } = req.body;
+    const sql = `
+    INSERT INTO catering_requests (name, email, phone, address, message) 
+    VALUES (?, ?, ?, ?, ?)`;
+    const params = [name, email, phone, address, message];
+    db.run(sql, params, (err) => {
+        if (err) {
+            console.error(err.message);
+            res.status(500).json({ error: 'Failed to submit request' });
+        } else {
+            res.status(200).json({ message: 'Request submitted successfully' });
+        }
+    });
+});
+
